@@ -1,38 +1,48 @@
-.App {
-  text-align: center;
+.table-section {
+  width: calc(100vw - 1000px);
+  height: calc(100vh - 100px);
+  overflow: scroll;
+  border: 1px solid rgb(198, 198, 198);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+table {
+  border-spacing: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+th {
+  border: 1px solid rgb(198, 198, 198);
+  padding: 5px;
+  width: 80px;
+  min-width: 80px;
+  position: sticky;
+  top: 0;
+  background-color: pink;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+td {
+  border: 1px solid rgb(198, 198, 198);
+  padding: 5px;
+  width: 80px;
+  min-width: 80px;
 }
 
-.App-link {
-  color: #61dafb;
+.table-section th:nth-child(1),
+.table-section td:nth-child(1) {
+  position: sticky;
+  left: 0;
+  background-color: rgb(200, 240, 255);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.table-section th:nth-child(2),
+.table-section td:nth-child(2) {
+  position: sticky;
+  left: 92px;
+  background-color: rgb(200, 240, 255);
 }
+
+.table-section th:nth-child(1),
+.table-section th:nth-child(2) {
+  z-index: 2;
+}
+
+/* ref video: https://youtu.be/_dpSEjaKqSE?si=RCH8rEHVC4E-Pzxh */
